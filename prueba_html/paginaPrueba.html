@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aprendiendo HTML</title>
+  <style>
+     body {
+      background-color: blue;
+      color: yellow;
+      border-radius: 8px;
+    }
+    button {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bienvenido a mi primera página</h1>
+  <p>Hacé click en el botón para cambiar el color de fondo</p>
+   <button onclick="cambiarColor()">Cambiar color de fondo</button>
+</body>
+
+<script>
+    function cambiarColor() {
+      document.body.style.backgroundColor = "yellow"; 
+    }
+  </script>
+
+</html>
