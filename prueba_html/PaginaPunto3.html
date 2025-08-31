@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FORMULARIO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Complete el formulario con Nombre y Correo</h1>
+
+  <input type="text" id="NameInput" placeholder="Escriba su Nombre...">
+  <button id="addNameBtn">Agregar</button>
+
+  <input type="text" id="mailInput" placeholder="Escriba su Correo...">
+  <button id="addMailBtn">Agregar</button>
+
+  <ul id="nameList"></ul>
+
+  <script>
+    const addNameBtn = document.getElementById("addNameBtn");
+    const addMailBtn = document.getElementById("addMailBtn");
+    const nameInput = document.getElementById("NameInput");
+    const mailInput = document.getElementById("mailInput");
+
+    // Validar campo de nombre
+    addNameBtn.addEventListener("click", function () {
+      const name = nameInput.value.trim();
+      if (name === "") {
+        alert("❌ El campo de nombre no puede estar vacío.");
+        return;
+      }
+      alert("✅ Nombre válido: " + name);
+      nameInput.value = "";
+      nameInput.focus();
+    });
+
+    // Validar campo de correo
+    addMailBtn.addEventListener("click", function () {
+      const email = mailInput.value.trim();
+      if (email === "") {
+        alert("❌ El campo de correo no puede estar vacío.");
+        return;
+      }
+      alert("✅ Correo válido: " + email);
+      mailInput.value = "";
+      mailInput.focus();
+    });
+  </script>
+
+</body>
+</html>
+
